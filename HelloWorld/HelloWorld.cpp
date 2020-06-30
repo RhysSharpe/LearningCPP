@@ -8,6 +8,8 @@ int main()
 {
     std::cout << "Hello World!\n";
 
+#pragma region Comments
+
     // https://www.learncpp.com/cpp-tutorial/comments/
 
     std::cout << "Hello world!\n"; // Everything from here to the end of the line is ignored
@@ -89,6 +91,21 @@ int main()
             std::cout << 2;
             std::cout << 3;
         */
+
+#pragma endregion Comments
+
+#pragma region Introduction to Variables
+
+    // https://www.learncpp.com/cpp-tutorial/introduction-to-variables/
+
+    int x; // define a variable named x, of type int
+
+    double width; // define a variable named width, of type double
+
+    int a, b; // same as multiple line definitions, no need to add int keyword for any following declarations
+
+    int a; double b; // correct (but not recommended) - should be split into separate lines
+#pragma endregion Introduction to Variables
 
 
 }
