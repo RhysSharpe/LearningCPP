@@ -98,7 +98,7 @@ int main()
 
     // https://www.learncpp.com/cpp-tutorial/introduction-to-variables/
 
-    int x; // define a variable named x, of type int
+    int x0; // define a variable named x0, of type int
 
     double width; // define a variable named width, of type double
 
@@ -142,6 +142,38 @@ int main()
     int a3, b3 = 5; // wrong (a3 is not initialized!)
 
 #pragma endregion
+
+#pragma region 1.5 - Introduction to iostream
+
+    // i/o library is included in the c++ standard library
+    // #include <iostream> is used to access it
+
+    std::cout << 4; // insertion operator (<<)
+
+    int x1{ 5 }; // define integer variable x1, initialized with value 5
+    std::cout << x1; // print value of x1 (5) to console
+
+    // insertion operator (<<) can be used multiple times in a single statement to concatenate
+    std::cout << std::endl <<  "Hello" << " world! X1 equals: " << x1 << '\n';
+
+    // std::endl moves the cursor to the next line, and it “flushes” the output (makes sure that it shows up on the screen immediately)
+    // std::cout, std::cout usually flushes output anyway, so it is more efficient to use '\n' instead of std:endl
+
+    
+    // std::cin is character input and uses the extraction operator (>>)
+
+    std::cout << "Enter a number: "; // ask user for a number
+    int input{ }; // define variable input to hold user input (and zero-initialize it)
+    std::cin >> input; // get number from keyboard and store it in variable x
+    std::cout << "You entered " << input << "!\n";
+
+    // << is used with std::cout, and shows the direction that data is moving (the output data is moving from the variable to the console)
+    // >> is used with std::cin, and shows the direction that data is moving (the input data is moving from the keyboard to the variable).
+
+
+#pragma endregion
+
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
