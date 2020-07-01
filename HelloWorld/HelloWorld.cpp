@@ -8,7 +8,7 @@ int main()
 {
     std::cout << "Hello World!\n";
 
-#pragma region Comments
+#pragma region 1.2 Comments
 
     // https://www.learncpp.com/cpp-tutorial/comments/
 
@@ -92,9 +92,9 @@ int main()
             std::cout << 3;
         */
 
-#pragma endregion Comments
+#pragma endregion
 
-#pragma region Introduction to Variables
+#pragma region 1.3 Introduction to Variables
 
     // https://www.learncpp.com/cpp-tutorial/introduction-to-variables/
 
@@ -102,12 +102,46 @@ int main()
 
     double width; // define a variable named width, of type double
 
-    int a, b; // same as multiple line definitions, no need to add int keyword for any following declarations
+    int a0, b0; // same as multiple line definitions, no need to add int keyword for any following declarations
 
-    int a; double b; // correct (but not recommended) - should be split into separate lines
-#pragma endregion Introduction to Variables
+    int a1; double b1; // correct (but not recommended) - should be split into separate lines
+#pragma endregion
+
+#pragma region 1.4 Variable assignment and initialization
+
+    // Assignment
+
+    int width0; // define an integer variable named width0
+    width0 = 5; // copy assignment of value 5 into variable width0
+
+    // variable width0 now has value 5
+    // '=' is the assignment operator
+
+    width0 = 7; // change value stored in variable width0 to 7
+
+    // variable width0 now has value 7
+
+    // Initialisation
+
+    int width1 = 5; // *copy initialization* of value 5 into variable width1
+
+    int width2(5); // *direct initialization* of value 5 into variable width2
 
 
+    int width3{ 5 }; // direct brace initialization of value 5 into variable width3 (preferred)
+    // empty braces means 0 but is used for temporary values
+
+    int height0 = { 6 }; // copy brace initialization of value 6 into variable height
+
+    // best practice to use direct brace initialization whenever possible
+
+    int a2 = 5, b2 = 6; // copy initialization
+    int c(7), d(8); // direct initialization
+    int e{ 9 }, f{ 10 }; // brace initialization (preferred)
+
+    int a3, b3 = 5; // wrong (a3 is not initialized!)
+
+#pragma endregion
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
