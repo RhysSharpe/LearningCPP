@@ -4,6 +4,10 @@
 #include "pch.h"
 #include <iostream>
 
+void doNothing(int&) // Don't worry about what & is for now, we're just using it to trick the compiler into thinking variable x is used
+{
+}
+
 int main()
 {
     std::cout << "Hello World!\n";
@@ -170,9 +174,35 @@ int main()
     // << is used with std::cout, and shows the direction that data is moving (the output data is moving from the variable to the console)
     // >> is used with std::cin, and shows the direction that data is moving (the input data is moving from the keyboard to the variable).
 
-
 #pragma endregion
 
+#pragma region 1.6 - Uninitialized variables and undefined behavior
+
+    // C/C++ does not initialize most variables to a given value (such as zero) automatically
+
+    /* when a variable is assigned a memory location by the compiler,
+     *  the default value of that variable is whatever (garbage) value
+     *  happens to already be in that memory location */
+
+    /*
+    * Initialization = The object is given a known value at the point of definition.
+    * Assignment = The object is given a known value beyond the point of definition.
+    * Uninitialized = The object has not been given a known value yet.
+    */
+
+    // define an integer variable named x
+    int uninitialized; // this variable is uninitialized because we haven't given it a value
+
+    doNothing(uninitialized); // make the compiler think we're assigning a value to this variable
+
+    // print the value of x to the screen
+    std::cout << uninitialized; // who knows what we'll get, because x is uninitialized
+
+    // This is the primary reason for the “always initialize your variables” best practice.
+
+
+
+#pragma endregion
 
 }
 
