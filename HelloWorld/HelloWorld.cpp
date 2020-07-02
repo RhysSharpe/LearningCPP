@@ -172,7 +172,7 @@ int main()
     std::cout << "You entered " << input << "!\n";
 
     // << is used with std::cout, and shows the direction that data is moving (the output data is moving from the variable to the console)
-    // >> is used with std::cin, and shows the direction that data is moving (the input data is moving from the keyboard to the variable).
+    // >> is used with std::cin, and shows the direction that data is moving (the input data is moving from the keyboard to the variable)
 
 #pragma endregion
 
@@ -198,9 +198,35 @@ int main()
     // print the value of x to the screen
     std::cout << uninitialized; // who knows what we'll get, because x is uninitialized
 
-    // This is the primary reason for the “always initialize your variables” best practice.
+    // This is the primary reason for the "always initialize your variables" best practice
 
+#pragma endregion
 
+#pragma region Keywords
+
+    // the name of a variable (or function, type, or other kind of item) is called an identifier
+
+    // the identifier can only be composed of letters(lower or upper case), numbers, and the underscore character.
+    // it must not start with a number
+    // they are case sensitive and cannot be the same as a keyword (e.g. return)
+
+    // Best practices:
+
+        // start with a lowercase letter
+        // functions should also start with a lowercase letter, like "main"
+        // user-defined types (such as structs, classes, and enumerations) start with an uppercase letter
+
+        // multi-word can be snake_case, or intercapped (camelCase)
+
+        int my_variable_name; // correct (separated by underscores/snake_case)
+        int my_function_name(); // correct (separated by underscores/snake_case)
+
+        int myVariableName; // correct (intercapped/CamelCase)
+        int myFunctionName(); // correct (intercapped/CamelCase)
+
+        // avoid naming identifiers starting with an underscore, as these names are typically reserved for OS, library, and/or compiler use
+
+        // identifiers should make clear what the value they are holding means
 
 #pragma endregion
 
