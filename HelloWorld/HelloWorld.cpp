@@ -202,7 +202,7 @@ int main()
 
 #pragma endregion
 
-#pragma region Keywords
+#pragma region Keywords & Naming Identifiers
 
     // the name of a variable (or function, type, or other kind of item) is called an identifier
 
@@ -227,6 +227,50 @@ int main()
         // avoid naming identifiers starting with an underscore, as these names are typically reserved for OS, library, and/or compiler use
 
         // identifiers should make clear what the value they are holding means
+
+#pragma endregion
+
+#pragma region Introduction to Literals & Operators
+
+        // A literal (also known as a literal constant) is a fixed value that has been inserted directly into the source code
+
+        // Hello world! and 5 are literals
+        // std::cout << "Hello world!";
+        // int x{ 5 };
+
+        // literals and variables both have a value (and a type),
+        // the value of a literal is fixed and cannot be changed (hence it being called a constant)
+        // the value of a variable can be changed through initialization and assignment
+
+        /* an operation is a mathematical calculation involving zero or more input values (called operands)
+         * that produces a new value (called an output value).  The specific operation to be performed is
+         * denoted by a construct (typically a symbol or pair of symbols) called an operator.*/
+
+        // e.g. 2 + 3 equals 5. the literals 2 and 3 are the operands, and the symbol + is the operator
+
+        // there are also a number of operators that are words (e.g. new, delete, and throw)
+
+        // the number of operands that an operator takes as input is called the operator’s arity
+        // operators in C++ come in three different arities:
+
+            // Unary operators act on one operand. e.g. the - operator.
+            // e.g. -5, operator- takes literal operand 5 and flips its sign to produce new output value -5
+
+            // Binary operators act on two operands (known as left and right). e.g. + operator
+            // e.g. 3 + 4, operator+ takes the left operand (3) and the right operand (4)
+            // insertion (<<) and extraction (>>) operators are also binary operators
+
+            // Ternary operators act on three operands. There is only one of these in C++.
+            // (expression 1) ? expression 2 : expression 3
+
+            // operators can have more than one meaning, such as the operator-
+
+
+        // operators can be chained together - the output of one operator can be used as the input for another operator
+        // e.g. 2 * 3 + 4 - multiplication first then addition
+
+        // the order is the same as standard mathematics
+        // Parenthesis first, then Exponents, then Multiplication & Division, then Addition & Subtraction.
 
 #pragma endregion
 
