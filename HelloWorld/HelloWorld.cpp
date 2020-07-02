@@ -109,6 +109,7 @@ int main()
     int a0, b0; // same as multiple line definitions, no need to add int keyword for any following declarations
 
     int a1; double b1; // correct (but not recommended) - should be split into separate lines
+
 #pragma endregion
 
 #pragma region 1.4 Variable assignment and initialization
@@ -202,7 +203,7 @@ int main()
 
 #pragma endregion
 
-#pragma region Keywords & Naming Identifiers
+#pragma region 1.7 - Keywords & Naming Identifiers
 
     // the name of a variable (or function, type, or other kind of item) is called an identifier
 
@@ -230,47 +231,85 @@ int main()
 
 #pragma endregion
 
-#pragma region Introduction to Literals & Operators
+#pragma region 1.8 - Introduction to Literals & Operators
 
-        // A literal (also known as a literal constant) is a fixed value that has been inserted directly into the source code
+    // A literal (also known as a literal constant) is a fixed value that has been inserted directly into the source code
 
-        // Hello world! and 5 are literals
-        // std::cout << "Hello world!";
-        // int x{ 5 };
+    // Hello world! and 5 are literals
+    // std::cout << "Hello world!";
+    // int x{ 5 };
 
-        // literals and variables both have a value (and a type),
-        // the value of a literal is fixed and cannot be changed (hence it being called a constant)
-        // the value of a variable can be changed through initialization and assignment
+    // literals and variables both have a value (and a type),
+    // the value of a literal is fixed and cannot be changed (hence it being called a constant)
+    // the value of a variable can be changed through initialization and assignment
 
-        /* an operation is a mathematical calculation involving zero or more input values (called operands)
-         * that produces a new value (called an output value).  The specific operation to be performed is
-         * denoted by a construct (typically a symbol or pair of symbols) called an operator.*/
+    /* an operation is a mathematical calculation involving zero or more input values (called operands)
+        * that produces a new value (called an output value).  The specific operation to be performed is
+        * denoted by a construct (typically a symbol or pair of symbols) called an operator.*/
 
-        // e.g. 2 + 3 equals 5. the literals 2 and 3 are the operands, and the symbol + is the operator
+    // e.g. 2 + 3 equals 5. the literals 2 and 3 are the operands, and the symbol + is the operator
 
-        // there are also a number of operators that are words (e.g. new, delete, and throw)
+    // there are also a number of operators that are words (e.g. new, delete, and throw)
 
-        // the number of operands that an operator takes as input is called the operator’s arity
-        // operators in C++ come in three different arities:
+    // the number of operands that an operator takes as input is called the operator’s arity
+    // operators in C++ come in three different arities:
 
-            // Unary operators act on one operand. e.g. the - operator.
-            // e.g. -5, operator- takes literal operand 5 and flips its sign to produce new output value -5
+        // Unary operators act on one operand. e.g. the - operator.
+        // e.g. -5, operator- takes literal operand 5 and flips its sign to produce new output value -5
 
-            // Binary operators act on two operands (known as left and right). e.g. + operator
-            // e.g. 3 + 4, operator+ takes the left operand (3) and the right operand (4)
-            // insertion (<<) and extraction (>>) operators are also binary operators
+        // Binary operators act on two operands (known as left and right). e.g. + operator
+        // e.g. 3 + 4, operator+ takes the left operand (3) and the right operand (4)
+        // insertion (<<) and extraction (>>) operators are also binary operators
 
-            // Ternary operators act on three operands. There is only one of these in C++.
-            // (expression 1) ? expression 2 : expression 3
+        // Ternary operators act on three operands. There is only one of these in C++.
+        // (expression 1) ? expression 2 : expression 3
 
-            // operators can have more than one meaning, such as the operator-
+        // operators can have more than one meaning, such as the operator-
 
 
-        // operators can be chained together - the output of one operator can be used as the input for another operator
-        // e.g. 2 * 3 + 4 - multiplication first then addition
+    // operators can be chained together - the output of one operator can be used as the input for another operator
+    // e.g. 2 * 3 + 4 - multiplication first then addition
 
-        // the order is the same as standard mathematics
-        // Parenthesis first, then Exponents, then Multiplication & Division, then Addition & Subtraction.
+    // the order is the same as standard mathematics
+    // Parenthesis first, then Exponents, then Multiplication & Division, then Addition & Subtraction.
+
+#pragma endregion
+
+#pragma region 1.9 - Introduction to expressions
+
+    // Each of these statements defines a new variable and initializes it with a value:
+
+    int xa{ 2 };             // initialize variable xa with value 2
+    int ya{ 2 + 3 };         // initialize variable ya with value 5
+    int za{ (2 * 3) + 4 };   // initialize variable za with value 10
+    int wa{ ya };             // initialize variable wa with value 5 (the current value of variable ya)
+
+    // An *expression* is a combination of literals, variables, operators, and explicit function calls (not shown above)
+    // that produce a single output value.
+
+    // When an expression is executed, each of the terms in the expression is evaluated until a single value remains
+    // (this process is called *evaluation*). That single value is the *result* of the expression.
+
+    // Expression examples:
+
+        /*  2               // 2 is a literal that evaluates to value 2
+            "Hello world!"  // "Hello world!" is a literal that evaluates to text "Hello world!"
+            x               // x is a variable that evaluates to the value of x
+            2 + 3           // 2 + 3 uses operator + to evaluate to value 5
+            x = 2 + 3       // 2 + 3 evaluates to value 5, which is then assigned to variable x
+            std::cout << x  // x evaluates to the value of x, which is then printed to the console
+        */
+
+    // Note that expressions do not end in a semicolon, and cannot be compiled by themselves
+    // Rather, expressions are always evaluated as part of statements
+
+    // type identifier { expression };
+    int xb{ 2 + 3 }; // 2 + 3 is an expression that has no semicolon - the semicolon is at the end of the statement containing the expression
+
+    // we can convert any expression into an equivalent statement (called an *expression statement*)
+    // an expression statement is a statement that consists of an expression followed by a semicolon
+
+    // Values calculated in an expression are discarded at the end of the expression
 
 #pragma endregion
 
