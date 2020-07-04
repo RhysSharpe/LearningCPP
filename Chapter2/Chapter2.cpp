@@ -38,6 +38,20 @@ int getValueFromUser() // this function now returns an integer value
     return input; // return the value the user entered back to the caller
 }
 
+/*
+    In C++, functions cannot be defined inside other functions - nested functions are not allowed.
+
+    int return7()
+    {
+        return 7;
+
+        int return9()
+        {
+            return 9;
+        }
+    }
+*/
+
 // Definition of function main()
 int main()
 {
@@ -55,6 +69,12 @@ int main()
 
     int num{ getValueFromUser() }; // initialize num with the return value of getValueFromUser()
     std::cout << num << " doubled is: " << num * 2 << '\n';
+
+
+    int x{ getValueFromUser() }; // first call to getValueFromUser
+    int y{ getValueFromUser() }; // second call to getValueFromUser
+
+    std::cout << x << " + " << y << " = " << x + y << '\n';
 
     // Your main function should return 0 (EXIT_SUCCESS) if the program ran normally.
     return EXIT_SUCCESS;
